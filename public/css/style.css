@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 
+/*========== VARIABLES GLOBALES ==========*/
 :root {
   --Inter-font: "Inter", sans-serif;
   --Meteoland-Gradiant: linear-gradient(180deg, #0b1b32 0%, #1f324c 100%);
@@ -8,6 +9,7 @@
   --Text-Color: #cfd8dc;
 }
 
+/*========== BASE ==========*/
 * {
   font-family: var(--Inter-font);
 }
@@ -21,28 +23,7 @@ body {
   padding: 0rem 1.88rem;
 }
 
-.loading_screen {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: #0B1B32;
-  color: var(--Text-Color);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-  z-index: 9999;
-  transition: opacity 0.3s ease;
-}
-
-.loading_screen.hidden {
-  opacity: 0;
-  pointer-events: none;
-}
-
-/*============= HEADER =============*/
-
+/*========== HEADER ==========*/
 header {
   display: flex;
   justify-content: space-between;
@@ -51,9 +32,7 @@ header {
 .header_title {
   color: var(--Text-Color);
   font-size: 1.5625rem;
-  font-style: normal;
   font-weight: 700;
-  line-height: normal;
 }
 
 .header_div1 {
@@ -63,11 +42,11 @@ header {
   gap: 1.75rem;
 }
 
+/* Barre de recherche (version desktop, cachée en mobile) */
 .header_searchbar {
   display: none;
   background: var(--Background-Grey);
   border-radius: 1.5rem;
-
   padding: 0.35rem 0.75rem;
 }
 
@@ -89,12 +68,7 @@ header {
 
 .header_searchbar_form_input {
   color: var(--Text-Color);
-  font-feature-settings: "liga" off, "clig" off;
   font-size: 1.25rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 1.25rem;
-  letter-spacing: -0.01438rem;
   background: none;
   border: 0;
   width: 11.8125rem;
@@ -104,6 +78,7 @@ header {
   color: var(--Text-Color);
 }
 
+/* Boutons Connexion / Inscription */
 .header_div_button {
   display: flex;
   gap: 0.625rem;
@@ -114,19 +89,12 @@ header {
   border-radius: 2.5rem;
   background: var(--Button-color);
   color: var(--Text-Color);
-  font-feature-settings: "liga" off, "clig" off;
   font-size: 0.9375rem;
-  font-style: normal;
   font-weight: 500;
-  line-height: 1.25rem;
-  letter-spacing: -0.01438rem;
   text-decoration: none;
 }
 
-/*=======================================*/
-
-/*============= MAIN SEARCHBAR =============*/
-
+/*========== MAIN : SEARCHBAR (mobile) ==========*/
 .main_section1 {
   display: flex;
   flex-direction: column;
@@ -143,7 +111,6 @@ header {
   height: 3.125rem;
   padding-left: 0.75rem;
   align-items: center;
-  flex-shrink: 0;
 }
 
 .main_searchbar_div1 {
@@ -164,23 +131,17 @@ header {
 
 .main_searchbar_form_input {
   color: var(--Text-Color);
-  font-feature-settings: "liga" off, "clig" off;
   font-size: 1.25rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 1.25rem;
-  letter-spacing: -0.01438rem;
   background: none;
   border: 0;
   width: 95%;
 }
+
 .main_searchbar_form_input::placeholder {
   color: var(--Text-Color);
 }
 
-/*=======================================*/
-
-/*============= MAIN =============*/
+/*========== MAIN ==========*/
 .main_section2_div1 {
   display: flex;
   flex-direction: column;
@@ -189,16 +150,11 @@ header {
 
 .main_forecast_title {
   color: var(--Text-Color);
-  font-feature-settings: "liga" off, "clig" off;
   font-size: 1.5rem;
-  font-style: normal;
   font-weight: 700;
-  line-height: 1.25rem;
-  letter-spacing: -0.01438rem;
 }
 
-/*============= MAIN CITY INFO =============*/
-
+/*========== MAIN CITY INFO ==========*/
 .main_section2_div1_info {
   display: flex;
   justify-content: space-between;
@@ -206,24 +162,16 @@ header {
 
 .main_info_city_name {
   color: var(--Text-Color);
-  font-feature-settings: "liga" off, "clig" off;
   font-size: 2.5rem;
-  font-style: normal;
   font-weight: 700;
-  line-height: 1.25rem;
-  letter-spacing: -0.01438rem;
   margin: 0;
 }
 
 .main_info_city_temp {
   color: var(--Text-Color);
-  font-feature-settings: "liga" off, "clig" off;
   font-size: 3rem;
-  font-style: normal;
   font-weight: 700;
-  line-height: 2.3125rem;
-  letter-spacing: -0.01438rem;
-  margin: 2rem 0 0 0;
+  margin-top: 2rem;
 }
 
 .main_info_city_temp_span {
@@ -232,25 +180,16 @@ header {
 
 .main_info_city_description {
   color: var(--Text-Color);
-  font-feature-settings: "liga" off, "clig" off;
   font-size: 1.5rem;
-  font-style: normal;
   font-weight: 400;
-  line-height: 1.25rem;
-  letter-spacing: -0.01438rem;
 }
 
 .main_section2_div1__info_svg {
-  width: auto;
   max-width: 6.25rem;
   height: 6.25rem;
-  flex-shrink: 0;
 }
 
-/*=======================================*/
-
-/*============= MAIN 48H FORECAST =============*/
-
+/*========== MAIN 48H FORECAST ==========*/
 .main_48h_forecast_carousel {
   overflow: hidden;
   position: relative;
@@ -273,18 +212,13 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   gap: 0.875rem;
 }
 
 .forecast_carousel_item p {
   color: var(--Text-Color);
-  font-feature-settings: "liga" off, "clig" off;
   font-size: 0.875rem;
-  font-style: normal;
   font-weight: 500;
-  line-height: 1.25rem;
-  letter-spacing: -0.01438rem;
   margin: 0;
 }
 
@@ -293,14 +227,10 @@ header {
   aspect-ratio: 1/1;
 }
 
-/*=======================================*/
-
-/*============= MAIN 5D FORECAST =============*/
-
+/*========== MAIN 5D FORECAST ==========*/
 .main_5d_forecast_div {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   gap: 0.9375rem;
 }
 
@@ -309,17 +239,12 @@ header {
   height: 2.75rem;
   justify-content: space-between;
   align-items: center;
-  align-self: stretch;
 }
 
 .main_5d_forecast_div_days_name {
   color: var(--Text-Color);
-  font-feature-settings: "liga" off, "clig" off;
   font-size: 1.5rem;
-  font-style: normal;
   font-weight: 500;
-  line-height: 1.875rem;
-  letter-spacing: -0.01438rem;
 }
 
 .main_5d_forecast_div_days_div {
@@ -335,25 +260,21 @@ header {
 
 .main_5d_forecast_div_days_temp {
   color: var(--Text-Color);
-  font-feature-settings: "liga" off, "clig" off;
   font-size: 1.5rem;
-  font-style: normal;
   font-weight: 700;
-  line-height: 1.875rem;
-  letter-spacing: -0.01438rem;
   width: 5.375rem;
   height: 1.875rem;
 }
 
-/*=======================================*/
+/*========== MEDIA QUERIES ==========*/
 
-/*============= MEDIA QUERY =============*/
-
-@media (min-width: 775px) {
+/* Tablette Portait */
+@media (min-width: 800px) {
   body {
     margin: 0.81rem 1.875rem;
   }
-  /*========== HEADER ==========*/
+
+/*====== HEADER ======*/
   .header_title {
     font-size: 2.5rem;
   }
@@ -362,25 +283,22 @@ header {
     padding: 0.5rem 0.625rem;
     font-size: 1.5625rem;
   }
-  /*===========================*/
 
-  /*========== MAIN ===============*/
-
+/*====== MAIN ======*/
   .main_forecast_title {
     font-size: 2rem;
   }
 
-  /*===========================*/
-
-  /*========== MAIN CITY INFO ==========*/
-
+/*====== MAIN CITY INFO ======*/
   .main_info_city_name {
     font-size: 3.75rem;
     line-height: 2.8125rem;
   }
+
   .main_info_city_temp {
     font-size: 4.5rem;
   }
+
   .main_info_city_temp_span {
     font-size: 3.75rem;
   }
@@ -389,30 +307,27 @@ header {
     font-size: 2.625rem;
     line-height: 2.5rem;
   }
+
   .main_section2_div1__info_svg {
     max-width: 9.375rem;
     height: 9.375rem;
   }
 
-  /*===========================*/
-
-  /*========== MAIN 48H FORECAST ==========*/
-
+/*====== MAIN 48H FORECAST ======*/
   .forecast_carousel_item {
     padding: 0.75rem 1.0625rem;
     gap: 2rem;
   }
+
   .forecast_carousel_item p {
     font-size: 1.75rem;
   }
+
   .forecast_carousel_item svg {
     height: 4.75rem;
   }
 
-  /*===========================*/
-
-  /*========== MAIN 5D FORECAST ==========*/
-
+/*====== MAIN 5D FORECAST ======*/
   .main_5d_forecast_div {
     gap: 1.875rem;
   }
@@ -429,34 +344,29 @@ header {
     width: 6.75rem;
     font-size: 2rem;
   }
-
-  /*===========================*/
 }
 
+/* Tablette Paysage et Desktop */
 @media (min-width: 1024px) {
-  /*========== HEADER ==========*/
-
+  /* Affiche la barre de recherche du header */
   .header_searchbar {
     display: unset;
   }
 
-  /*===========================*/
-
-  /*========== MAIN ===============*/
-
+  
+  /* Layout flex pour les 2 sections principales */
   .main_section2 {
     display: flex;
     justify-content: space-between;
     gap: 4rem;
   }
 
-  /*===========================*/
-
-  /*========== MAIN CITY INFO ==========*/
-
+  /* Cache la searchbar principale (mobile) */
   .main_searchbar {
     display: none;
   }
+
+  /*========== MAIN ==========*/
 
   .main_forecast_title {
     margin-top: 0.5rem;
@@ -469,14 +379,7 @@ header {
     min-width: 0;
   }
 
-  /*===========================*/
-
-  /*========== MAIN 48H FORECAST ==========*/
-
-  /*===========================*/
-
-  /*========== MAIN 5D FORECAST ==========*/
-
+/*====== MAIN 5D FORECAST ======*/
   .main_5d_forecast_div {
     gap: 2.75rem;
   }
@@ -485,17 +388,14 @@ header {
     height: 3.9rem;
   }
 
-  .main_5d_forecast_div_days_svg{
+  .main_5d_forecast_div_days_svg {
     height: 3.75rem;
   }
 
-  .main_5d_forecast_div_days_temp{
+  .main_5d_forecast_div_days_temp {
     width: 10.375rem;
     font-size: 2.5rem;
-
   }
-
-  /*===========================*/
 }
 
 /*@media (min-width: 1440px) {

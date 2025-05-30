@@ -12,6 +12,7 @@
     <header>
         <h1 class="header_title">Météoland</h1>
         <div class="header_div1">
+            <!-- SECTION 1 : Barre de recherche visible à partir de width:1024px -->
             <div class="header_searchbar">
                 <div class="header_searchbar_div1">
                     <svg class="header_searchbar_svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
@@ -28,6 +29,7 @@
                     </form>
                 </div>
             </div>
+            <!------------------------------------------------->
             <div class="header_div_button">
                 <a class="header_button" href="">Connexion</a>
                 <a class="header_button" href="">Inscription</a>
@@ -35,6 +37,7 @@
         </div>
     </header>
     <main>
+        <!-- Barre de recherche visible en dessous de width:1024px -->
         <section class="main_section1">
             <div class="main_searchbar">
                 <div class="main_searchbar_div1">
@@ -52,31 +55,41 @@
                 </div>
             </div>
         </section>
+        <!------------------------------>
+        <!-- SECTION 2 : infos météo -->
         <section class="main_section2">
+            <!-- Météo actuelle + prévisions 48h -->
             <div class="main_section2_div1">
                 <div class="main_section2_div1_info">
+                    <!-- Ville + température + description météo -->
                     <div class="main_info_city">
                     </div>
+                    <!-- Emplacement pour l’icône météo SVG -->
                     <div class="main_section_info_div1_svgplace">
                     </div>
                 </div>
+                <!-- Bloc prévisions 48h -->
                 <div class="main_section2_div1_forecast">
                     <div class="main_48h_forecast">
                         <p class="main_forecast_title">Prévisions sur 48 heures</p>
                         <div class="main_48h_forecast_carousel">
+                            <!-- Injection dynamique des différentes météos suivant l'heure (par tranche de 3h) -->
                             <div class="main_48h_forecast_carousel_wrapper"></div>
+
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- Prévisions sur 5 jours -->
             <div class="main_section2_div2">
                 <div class="main_5d_forecast">
                     <p class="main_forecast_title">Prévisions sur 5 jours</p>
+                    <!-- Injection dynamique des différentes jours -->
                     <div class="main_5d_forecast_div"></div>
                 </div>
             </div>
         </section>
-
+        <!------------------------------>
     </main>
     <script type="module" src="/Meteoland/js/app.js"></script>
 </body>

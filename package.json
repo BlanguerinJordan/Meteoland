@@ -15,7 +15,10 @@
     "start": "node ./src/app.js",
     "firstdev": "pm2 start ./src/app.js --watch",
     "dev": "pm2 start 0",
-    "logs":"pm2 log 0"
+    "logs": "pm2 log 0",
+    "version:patch": "npm version patch && git push && git push --tags",
+    "version:minor": "npm version minor && git push && git push --tags",
+    "version:major": "npm version major && git push && git push --tags"
   },
   "repository": {
     "type": "git",
