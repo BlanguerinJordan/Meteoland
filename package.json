@@ -8,7 +8,7 @@
     "pm2": "^6.0.6"
   },
   "name": "meteoland",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Meteo app",
   "main": "./src/app.js",
   "scripts": {
