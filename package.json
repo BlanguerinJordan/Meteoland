@@ -1,0 +1,34 @@
+{
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "iron-session": "^6.3.1",
+    "mysql2": "^3.14.1",
+    "pm2": "^6.0.6"
+  },
+  "name": "meteoland",
+  "version": "1.0.0",
+  "description": "Meteo app",
+  "main": "./src/app.js",
+  "scripts": {
+    "start": "node ./src/app.js",
+    "firstdev": "pm2 start ./src/app.js --watch",
+    "dev": "pm2 start 0",
+    "logs":"pm2 log 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/BlanguerinJordan/Meteoland.git"
+  },
+  "keywords": [
+    "meteo"
+  ],
+  "author": "JordanB",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BlanguerinJordan/Meteoland/issues"
+  },
+  "homepage": "https://github.com/BlanguerinJordan/Meteoland#readme",
+  "type": "module"
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Meteoland/css/style.css">
+    <title>Météoland</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="header_title">Météoland</h1>
+        <div class="header_div1">
+            <div class="header_searchbar">
+                <div class="header_searchbar_div1">
+                    <svg class="header_searchbar_svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                        fill="none">
+                        <path
+                            d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
+                            stroke="#B0BEC5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M21 21L16.65 16.65" stroke="#B0BEC5" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                    <form class="header_searchbar_form" method="post">
+                        <input id="header_search" class="header_searchbar_form_input" type="text"
+                            placeholder="Rechercher une ville">
+                    </form>
+                </div>
+            </div>
+            <div class="header_div_button">
+                <a class="header_button" href="">Connexion</a>
+                <a class="header_button" href="">Inscription</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="main_section1">
+            <div class="main_searchbar">
+                <div class="main_searchbar_div1">
+                    <svg class="main_searchbar_svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                        <path
+                            d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
+                            stroke="#B0BEC5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M21 21L16.65 16.65" stroke="#B0BEC5" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                    <form class="main_searchbar_form" method="post">
+                        <input id="main_search" class="main_searchbar_form_input" type="text"
+                            placeholder="Rechercher une ville">
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section class="main_section2">
+            <div class="main_section2_div1">
+                <div class="main_section2_div1_info">
+                    <div class="main_info_city">
+                    </div>
+                    <div class="main_section_info_div1_svgplace">
+                    </div>
+                </div>
+                <div class="main_section2_div1_forecast">
+                    <div class="main_48h_forecast">
+                        <p class="main_forecast_title">Prévisions sur 48 heures</p>
+                        <div class="main_48h_forecast_carousel">
+                            <div class="main_48h_forecast_carousel_wrapper"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main_section2_div2">
+                <div class="main_5d_forecast">
+                    <p class="main_forecast_title">Prévisions sur 5 jours</p>
+                    <div class="main_5d_forecast_div"></div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <script type="module" src="/Meteoland/js/app.js"></script>
+</body>
+
+</html>
